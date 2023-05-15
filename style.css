@@ -186,6 +186,11 @@ a {
     margin-inline: 20px;
 }
 
+.submitButton {
+    color:white;
+    background-color:blueviolet;
+}
+
 
 
 #listContainer {
@@ -552,6 +557,11 @@ a {
 
 
 @media screen and (min-width:400px) and (max-width:900px) {
+    #bedFormContainer {
+        margin:0 auto;
+        width:60%;
+    }
+
     .verticalLineNavbar {
        display: none;
     }
@@ -700,6 +710,11 @@ a {
 
 
 @media screen and (max-width:650px) {
+    #bedFormContainer {
+        width:80%;
+        margin:0 auto;
+    }
+
 
     #bedContainer {
         margin-bottom: 80px;
