@@ -16,17 +16,29 @@
 
 <body>
     <header><a href="index.html" class="logo"></a>
+        <div class="connected1">
+            <div class="userImage"></div>
+            <div class="connected2">
+                <h5>Itzhak Hachamski</h5>
+                    <div class="circleMiniG">
+                        <div class="connected3">
+                            <p>Active</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
         <button class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="white"
                 class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                     d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
             </svg></button>
+        <div class="verticalLineNavbar"></div>
         <nav class="navbar navbar-inverse navbar-static-top">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a class="selected" href="#">Search</a></li>
+                <li><a href="#">Notifications</a></li>
                 <li><a href="#">Settings</a></li>
-                <li><a href="#">Account</a></li>
             </ul>
         </nav>
     </header>
@@ -96,26 +108,45 @@
     window.onload = () => {
         var i = 0;
         var container = document.getElementById('listContainer');
-        while (i < 18) {
+        while (i < 14) {
             var box = document.createElement('div');
             var plusBox = document.createElement('div');
             box.className = 'listObject';
-            plusBox.className = 'listObjectPlus'; 
+            plusBox.className = 'listObjectPlus';
             box.innerHTML = `<h5>Bed #: 0435</h5>
             <h5> Patient Name: Moshe Levi</h5>
             <h5> Ward: Surgical</h5>
             <h5> Room #: 13</h5>
             <label>Last visited by: Dr. Hachamski</label>`;
-            plusBox.innerHTML = '<div class=name><h5># 0435 Moshe Levi</h5></div><div class="validMap"><img src="images/map-icon.svg" fill-opacity="70%" alt="map"></div><div class="validIcon"><img src="images/HealthyBed_valid_icon.png" alt="valid"></div>';
-            
+            plusBox.innerHTML = `<div class=name><h5># 0435 Moshe Levi</h5></div>
+            <div class="validMap"><img src="images/map-icon.svg" fill-opacity="70%" alt="map"></div>
+            <div class="validIcon"><img src="images/HealthyBed_valid_icon.png" alt="valid"></div>`;
             box.onclick = () => {
                 window.location.href = "bed.html";
             }
             box.appendChild(plusBox);
             container.appendChild(box);
             i++;
+            }
+
+            var emptyBed = document.createElement('div');
+            var plusBox2 = document.createElement('div');
+            emptyBed.className = 'listObject';
+            plusBox2.className = 'listObjectPlus';
+            emptyBed.innerHTML = `<h5>Bed #: 0112</h5>
+            <h5> Patient Name: -</h5>
+            <h5> Ward: Surgical</h5>
+            <h5> Room #: 13</h5>
+            <label>Last visited by: -</label>`;
+            plusBox2.innerHTML = `<div class=name><h5># 0112 Unoccupied</h5></div>
+            <div class="validMap"><img src="images/map-icon.svg" fill-opacity="70%" alt="map"></div>
+            <div class="addIcon"><svg fill="#006ce5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="#006ce5" d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></div>`;
+            emptyBed.onclick = () => {
+                window.location.href = "newbed.html";
+            }
+            emptyBed.appendChild(plusBox2);
+            container.appendChild(emptyBed);
         };
-    }
 
 
 </script>

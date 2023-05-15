@@ -54,10 +54,69 @@ header {
     margin-bottom: 20px;
 }
 
+.userImage {
+    background-image: url("images/Doc.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    border-radius: 100px 100px 100px 100px;
+    border:1px solid black;
+    height:50px;
+    width:50px;
+
+}
+
+.connected1 {
+    display: flex;
+    color: rgb(242, 240, 240);
+    gap: 10px;
+    position: sticky;
+    position:absolute;
+    top:35px;
+    right:50px;
+
+}
+
+
+.connected2 {
+    display: block;
+}
+
+.circleMiniG {
+    display: flex;
+    position: sticky;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #62c462;
+    border-color: #ffffff;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 100%;
+    top: 25px;
+
+}
+
+.connected3 {
+    color: #232323;
+    position: sticky;
+    margin: 0px 0px 100px 14px;
+}
+
 .navbar {
     display: flex;
     position: sticky;
     width: 100%;
+}
+
+.verticalLineNavbar {
+    width: 1px;
+    height: 31px;
+    opacity: 50%;
+    border-color: #ffffff;
+    border-width: 0.7px;
+    border-style: solid;
+    margin: 0px 0px 12px 0px;
 }
 
 .navbar ul {
@@ -135,6 +194,7 @@ a {
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
+    padding-bottom: 60px;
 }
 
 .listObject {
@@ -162,6 +222,13 @@ a {
 .validIcon {
     display: flex;
     margin: 1px 0px 2px 2px;
+}
+
+.addIcon {
+    display: flex;
+    margin: 5px 0px 2px 8px;
+    width:25px;
+    height:25px;
 }
 
 
@@ -193,7 +260,14 @@ a {
     justify-content: flex-start;
 }
 
+#bedUpdateContainer {
+    margin-top:60px;
+    padding-bottom: 40px;
+}
 
+#bedUpdateContainer h2 {
+    position:sticky;
+}
 
 
 .updateObject {
@@ -234,13 +308,23 @@ a {
     align-self: flex-start;
 }
 
+#bedFullPageContainer {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+
+#bedUpdateContainer {
+    width:100%;
+}
+
 #bedContainer {
     width: 100%;
-    
+
 }
 
 #bedContainer h2 {
-    margin-bottom: 200px;
+    margin-bottom: 240px;
 }
 
 
@@ -254,61 +338,94 @@ a {
     display: block;
     align-self: center;
     position: relative;
-    color:black;
-    top:100px;
+    color: black;
+    top: 100px;
+    width:fit-content;
 }
 
 
 
 .validBedLogo {
-    display: inline-block;
+    display: flex;
     justify-content: center;
-    background-size: contain;
-    background-image: url("images/BedValidIcon.png");
-    background-repeat: no-repeat;
-    height:200px;
-    width: 200px;
-    margin:25px;
+    margin: 25px 60px 10px 40px;
+    flex-direction: column;
+}
+
+.validBedLogo svg {
+    display: block;
+    width: 150px;
+    height:150px;
+    margin-bottom: 10px;
+
+}
+
+.validBedLogo label {
+    position:sticky;
+    align-self: center;
+    width: fit-content;
 }
 
 .NavigateBedIcon {
-    display: inline-block;
+    display: flex;
     justify-content: center;
-    background-size: contain;
-    background-image: url("images/Location.png");
-    background-repeat: no-repeat;
-    height:200px;
-    width: 200px;
-    margin:25px;
+    flex-direction: column;
+    margin: 25px 60px 0px 40px;
+}
+
+.NavigateBedIcon svg {
+    display: block;
+    width:140px;
+    height:140px;
+    margin-bottom: 15px;
+}
+
+.NavigateBedIcon label {
+    position:sticky;
+    align-self: center;
+    width: fit-content;
 }
 
 
 .TasksBedIcon {
-    display: inline-block;
-    background-size: contain;
-    background-image: url("images/Tasks.png");
-    background-repeat: no-repeat;
-    height:200px;
-    width: 200px;
-    margin:25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 25px 60px 0px 40px;
+
 }
 
+.TasksBedIcon svg {
+    display: block;
+    width:140px;
+    height:140px;
+    margin-bottom: 14px;
+}
+
+
 .TasksBedIcon label {
-    left:82px;
+    align-self: center;
+    width: fit-content;
+    position: sticky;
 }
 
 .maintenanceBedIcon {
-    display: inline-block;
-    background-size: contain;
-    background-image: url("images/Maintenance.png");
-    background-repeat: no-repeat;
-    height:200px;
-    width: 200px;
-    margin:25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 25px 40px 0px 40px;
+}
+
+.maintenanceBedIcon svg {
+    display: block;
+    width:130px;
+    height:130px;
+    margin-bottom: 25px;
 }
 
 .maintenanceBedIcon label {
-    left:15px;
+    position: sticky;
+    left: 15px;
 }
 
 
@@ -355,14 +472,21 @@ a {
 
     .validIcon {
         margin-top: 2px;
-        width:25px;
-        height:25px;
+        width: 25px;
+        height: 25px;
     }
+
+    .addIcon {
+        width:20px;
+        height:20px;
+        margin-right: 2px;
+    }
+    
 
     .validMap {
         margin-top: 5px;
         width: 20px;
-        height:20px;
+        height: 20px;
     }
 
     .listObjectPlus h5 {
@@ -371,32 +495,32 @@ a {
     }
 
     .validBedLogo {
-        height:150px;
+        height: 150px;
         width: 150px;
     }
-    
+
     .NavigateBedIcon {
-        height:150px;
+        height: 150px;
         width: 150px;
     }
-    
-    
+
+
     .TasksBedIcon {
-        height:150px;
+        height: 150px;
         width: 150px;
     }
-    
+
     .maintenanceBedIcon {
-        height:150px;
+        height: 150px;
         width: 150px;
     }
 
     .bedIconText {
-        top:80px;
+        top: 80px;
     }
 
     .TasksBedIcon .bedIconText {
-        left:50px;
+        left: 50px;
     }
 
 }
@@ -409,6 +533,30 @@ a {
 
 
 @media screen and (min-width:400px) and (max-width:900px) {
+    .verticalLineNavbar {
+       display: none;
+    }
+
+    .connected3 {
+        display: none;
+    }
+
+    .connected2 h5 {
+       display:none;
+    }
+
+    .connected1 {
+        top:20px;
+    }
+
+    .userImage {
+        height:35px;
+        width:35px;
+     }
+ 
+
+
+
     .logo {
         height: 80px;
         width: 80px;
@@ -449,7 +597,7 @@ a {
     }
 
     .listObjectPlus {
-        top:5px;
+        top: 5px;
     }
 
     .listObjectPlus h5 {
@@ -458,13 +606,19 @@ a {
     }
 
     .validIcon {
-        height:20px;
-        width:20px;
+        height: 20px;
+        width: 20px;
     }
 
+    .addIcon {
+        width:19px;
+        height:19px;
+    }
+    
+
     .validMap {
-        width:15px;
-        height:15px;
+        width: 15px;
+        height: 15px;
         margin-bottom: 1px;
     }
 
@@ -478,45 +632,45 @@ a {
     }
 
     #bedContainer a label {
-        top:45px;
+        top: 45px;
         font-size: small;
         width: fit-content;
         text-align: center;
     }
 
     .validBedLogo {
-        height:100px;
-        width: 100px;
-        margin:40px;
-    
+        height: 120px;
+        width: 120px;
+        margin: 20px;
+
     }
-    
+
     .NavigateBedIcon {
-        height:100px;
-        width: 100px;
-        margin:40px;
-    
+        height: 120px;
+        width: 120px;
+        margin: 20px;
+
     }
-    
-    
+
+
     .TasksBedIcon {
-        height:100px;
-        width: 100px;
-        margin:40px;
+        height: 120px;
+        width: 120px;
+        margin: 20px;
     }
 
     .TasksBedIcon .bedIconText {
-        left:25px;
+        left: 25px;
     }
-    
+
     .maintenanceBedIcon {
-        height:100px;
-        width: 100px;
-        margin:40px;
+        height: 120px;
+        width: 120px;
+        margin: 20px;
     }
 
     .maintenanceBedIcon .bedIconText {
-        left:-5px;
+        left: -5px;
     }
 
 
@@ -527,6 +681,35 @@ a {
 
 
 @media screen and (max-width:650px) {
+
+    #bedContainer {
+        margin-bottom: 80px;
+    }
+
+    
+    #bedUpdateContainer {
+        margin-top: 40px;
+    }
+    
+
+    .verticalLineNavbar {
+        display: none;
+     }
+ 
+     .connected3 {
+         display: none;
+     }
+ 
+     .connected2 h5 {
+        display:none;
+     }
+ 
+     .connected1 {
+         top:20px;
+     }
+
+    
+
     #wrapper {
         width: 95%;
         margin: 0 auto;
@@ -631,12 +814,12 @@ a {
 
     #bedContainer a {
         display: block;
-        margin:10px;
+        margin: 10px;
     }
 
     #bedContainer a label {
         display: block;
-        top:115px;
+        top: 115px;
     }
 
     .bedIconText {
@@ -644,55 +827,66 @@ a {
         text-align: center;
     }
 
-    .validBedLogo {
-        height:150px;
-        width: 150px;
-    }
-    
-    .NavigateBedIcon {
-        height:150px;
-        width: 150px;
+    .validBedLogo svg {
+        height: 100px;
+        width: 100px;
     }
 
-    .NavigateBedIcon .bedIconText {
-        left:33px;
-    }
-    
-    
-    .TasksBedIcon {
-        height:150px;
-        width: 150px;
+    .NavigateBedIcon svg {
+        height: 100px;
+        width: 100px;
     }
 
-    .TasksBedIcon .bedIconText {
-        left:40px;
+
+
+    .TasksBedIcon svg {
+        height: 100px;
+        width: 100px;
     }
-    
-    .maintenanceBedIcon {
-        height:150px;
-        width: 150px;
+
+
+    .maintenanceBedIcon svg {
+        height: 100px;
+        width: 100px;
     }
+
+    .userImage {
+        height:45px;
+        width:45px;
+     }
+ 
 
 
 
 
 }
 
+
+
 @media screen and (max-width:400px) {
+   #wrapper {
+    width:90%;
+    margin:0 auto;
+   }
+
     #bedContainer {
         justify-content: space-evenly;
     }
 
+    .connected1 {
+        right:25px;
+    }
+
     .validIcon {
-        width:26px;
-        height:26px;
+        width: 26px;
+        height: 26px;
         margin-left: 5px;
         margin-right: 5px;
     }
 
     .mapIcon {
-        width:26px;
-        height:26px;
+        width: 26px;
+        height: 26px;
     }
 
     .listObjectPlus h5 {
@@ -701,15 +895,19 @@ a {
         justify-self: left;
     }
 
+    #bedContainer {
+        width:90%;
+        margin:0 auto;
+    }
 
     #bedContainer a {
         display: block;
-        margin:10px;
+        margin: 10px;
     }
 
     #bedContainer a label {
         display: block;
-        top:83px;
+        top: 83px;
     }
 
     .bedIconText {
@@ -717,49 +915,102 @@ a {
         text-align: center;
     }
 
+    .bedIconText {
+        display: block;
+        align-self: center;
+        position: relative;
+        color: black;
+        top: 100px;
+        width:fit-content;
+    }
+    
+    
+    
     .validBedLogo {
-        height:150px;
-        width: 150px;
+        display: flex;
+        justify-content: center;
+        margin: 25px 60px 10px 40px;
+        flex-direction: column;
+    }
+    
+    .validBedLogo svg {
+        width: 70px;
+        height:70px;
+        margin-bottom: 10px;
+    
     }
     
     .NavigateBedIcon {
-        height:150px;
-        width: 150px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 25px 60px 0px 40px;
+    }
+    
+    .NavigateBedIcon svg {
+        display: block;
+        width:70px;
+        height:70px;
+        margin-bottom: 15px;
     }
 
-    .NavigateBedIcon .bedIconText {
-        left:0px;
+    .NavigateBedIcon label {
+        margin-left: 10px;
     }
     
     
     .TasksBedIcon {
-        height:150px;
-        width: 150px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 25px 60px 0px 40px;
+    
+    }
+    
+    .TasksBedIcon svg {
+        display: block;
+        width:70px;
+        height:70px;
+        margin-bottom: 14px;
     }
 
-    .TasksBedIcon .bedIconText {
-        left:2px;
+    .TasksBedIcon label {
+        margin-left:20px;
     }
+    
+
     
     .maintenanceBedIcon {
-        height:150px;
-        width: 150px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 25px 40px 0px 40px;
     }
+    
+    .maintenanceBedIcon svg {
+        display: block;
+        width:70px;
+        height:70px;
+        margin-bottom: 12px;
+    }
+    
+    .maintenanceBedIcon label {
+        position: sticky;
+    }
+    
 
-    .maintenanceBedIcon .bedIconText{
-        left:-5px;
-    }
+
 
     .formObject {
-        width:120px;
+        width: 120px;
     }
 
-    
+
 }
 
 @media screen and (max-width:399px) {
     .formObject {
-        width:100px;
+        width: 100px;
     }
 
 
@@ -774,7 +1025,7 @@ a {
 @media screen and (max-width:370px) {
     .listObjectPlus h5 {
         font-size: x-small;
-        
+
     }
 
 }
@@ -784,12 +1035,12 @@ a {
 @media screen and (max-width:281px) {
 
     .formObject {
-        width:75px;
+        width: 75px;
         font-size: xx-small;
     }
 
     .listObjectPlus h5 {
-        width:max-content;
+        width: max-content;
         display: contents;
         font-size: x-small;
 
